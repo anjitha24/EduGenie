@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+.auth-orange-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: linear-gradient(135deg, #ff6f00, #ff8f00, #ff9800);
+  background-size: 400% 400%;
+  animation: gradientShift 6s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.page-heading {
+  color: #070707;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.auth-orange-container {
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-orange-card {
+  background: rgba(255, 255, 255, 0.98);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  color: #080101;
+}
+.auth-orange-card input {
+  display: block;
+  margin-left: 20px;
+  width: 85%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc9c9;
+  border-radius: 8px;
+  background: rgba(176, 226, 222, 0.349);
+  color: #222121;
+  font-size: 1rem;
+}
+
+.auth-orange-card input::placeholder {
+  color: #333;  /* Light black / dark gray */
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #0a0a0a;
+}
+
+input {
+  margin-left: 20px;
+  width: 85%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #000;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #555;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 30px;
+  top: 12px;
+  cursor: pointer;
+  color: #333;
+}
+
+.auth-button {
+  margin-left: 20px;
+  width: 86%;
+  padding: 0.8rem 1rem;
+  background-color: #ff6f00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+}
+
+.auth-button:hover {
+  background-color: #f79245;
+}
+
+.auth-footer {
+  margin-top: 1rem;
+  text-align: center;
+  color: #111;
+}
+
+.register-link {
+  color: #111;
+  cursor: pointer;
+  text-decoration: underline;
+}

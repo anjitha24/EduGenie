@@ -58,8 +58,9 @@ const TopicInput = ({ setTopic, setNotes, setQuiz }) => {
         value={input || transcript}
         onChange={(e) => setInput(e.target.value)}
         style={{
+          marginRight:'320px',
           padding: '0.9rem 1rem',
-          width: '50%',
+          width: '100%',
           borderRadius: '8px',
           border: '1px solid #ccc',
           fontSize: '1rem',
