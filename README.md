@@ -11,7 +11,7 @@ https://github.com/your-username/your-repo/assets/demo.mp4
 
 ## ✨ Features
 
-AI-Generated Notes (Structured, Simple & Topic-Wise)  
+Summary Note Generation using FLAN-T5 large model + OpenVINO (Structured, Simple & Topic-Wise)  
 Auto-Generated MCQ Quizzes from the Topic  
 7-Day Smart Study Plan Generation  
 Voice Input Support (Speech-to-Text for Topic Input)  
