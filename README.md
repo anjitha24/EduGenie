@@ -1,74 +1,54 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# 🧠 EduGenie – AI-Powered Interactive Learning Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+EduGenie is an AI-driven web platform that helps students learn faster and better by generating structured notes, quizzes, and study plans for any topic. Powered by the google/flan-t5-large model optimized with OpenVINO™, EduGenie delivers fast and intelligent content creation tailored for student needs.
 
-## Available Scripts
+🎬 [Demo Video](https://raw.githubusercontent.com/Ashwini728/EduGenie/DemoVideo.mp4)
 
-In the project directory, you can run:
+📽️ Demo: Watch how EduGenie generates notes and quizzes instantly!
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Summary Note Generation using FLAN-T5 large model + OpenVINO (Structured, Simple & Topic-Wise)  
+Auto-Generated MCQ Quizzes from the Topic  
+7-Day Smart Study Plan Generation  
+Voice Input Support (Speech-to-Text for Topic Input)  
+Notes Export to PDF  
+User Authentication with Login/Register  
+Mobile-Responsive UI Built with React  
+Optimized Inference with OpenVINO for Fast Results
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Technologies Used
 
-### `npm run build`
+🔹 React.js (Frontend)  
+🔹 FastAPI with OpenVINO (Backend AI Inference)  
+🔹 google/flan-t5-large via HuggingFace  
+🔹 Pyngrok (for exposing local backend)  
+🔹 SpeechRecognition API for Voice Input  
+🔹 jsPDF for PDF Export  
+🔹 OpenVINO Toolkit from Intel for model acceleration
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
+## 🧪 How It Works
+🗣️ Enter or Speak a Topic
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🧠 AI generates structured notes using FLAN-T5 + OpenVINO
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+📝 Notes and 📚 quizzes appear instantly
 
-### `npm run eject`
+🧭 Optionally generate a study plan for 7 days
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+📥 Export content as PDF
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📦 Installation & Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# AILearningAssistant
->>>>>>> 96c849b7ebbfad6196909bca4c216cc414bcb169
+```bash
+git clone https://github.com/Ashwini728/edugenie.git
+cd edugenie
