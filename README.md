@@ -13,7 +13,7 @@ https://github.com/your-username/your-repo/assets/demo.mp4
 
 AI-Generated Notes (Structured, Simple & Topic-Wise)  
 Auto-Generated MCQ Quizzes from the Topic  
-7-Day Smart Study Plan using Generative AI  
+7-Day Smart Study Plan Generation  
 Voice Input Support (Speech-to-Text for Topic Input)  
 Notes Export to PDF  
 User Authentication with Login/Register  
@@ -33,11 +33,23 @@ Optimized Inference with OpenVINO for Fast Results
 🔹 OpenVINO Toolkit from Intel for model acceleration
 
 ---
+## 🧪 How It Works
+🗣️ Enter or Speak a Topic
+
+🧠 AI generates structured notes using FLAN-T5 + OpenVINO
+
+📝 Notes and 📚 quizzes appear instantly
+
+🧭 Optionally generate a study plan for 7 days
+
+📥 Export content as PDF
+
+---
 
 ## 📦 Installation & Setup
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/edugenie.git
+git clone https://github.com/Ashwini728/edugenie.git
 cd edugenie
