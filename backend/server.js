@@ -16,8 +16,9 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+// Route to generate quiz
 app.post('/generate-quiz', async (req, res) => {
-  const { topic, numQuestions, difficulty } = req.body;
+  const { topic, numQuestions = 5, difficulty = 'medium' } = req.body;
 
   if (!topic?.trim()) {
     return res.status(400).json({ error: 'Please enter a quiz topic.' });
@@ -57,7 +58,6 @@ Only include the JSON array — no extra text.
     const raw = response.choices[0].message.content;
     let quiz = JSON.parse(raw);
 
-    // 🔒 Filter out any question without valid structure
     quiz = quiz.filter(q =>
       q.type === 'mcq' &&
       q.question &&
@@ -71,6 +71,31 @@ Only include the JSON array — no extra text.
   } catch (error) {
     console.error('OpenAI error:', error);
     res.status(500).json({ error: 'Failed to generate quiz.' });
+  }
+});
+
+// Route to generate study plan
+app.post('/study-plan', async (req, res) => {
+  const { topic } = req.body;
+
+  if (!topic?.trim()) {
+    return res.status(400).json({ error: 'Please provide a topic for the study plan.' });
+  }
+
+  const prompt = `Create a detailed 7-day study plan to learn "${topic}" for exams. The plan should include daily topics to study and suggested activities. Format it clearly.`
+
+  try {
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4',
+      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 1000,
+    });
+
+    const plan = completion.choices[0].message.content;
+    res.json({ plan });
+  } catch (error) {
+    console.error('OpenAI error:', error);
+    res.status(500).json({ error: 'Failed to generate study plan.' });
   }
 });
 

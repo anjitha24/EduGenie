@@ -19,7 +19,7 @@ const TopicInput = ({ setTopic, setNotes, setQuiz }) => {
     resetTranscript();
 
     try {
-      const res = await axios.post('https://ee57-34-106-10-6.ngrok-free.app/generate-notes', {
+      const res = await axios.post('https://6f20-35-194-182-89.ngrok-free.app/generate-notes', {
         topic: finalTopic,
       });
       setNotes(res.data.notes);
@@ -73,12 +73,6 @@ const TopicInput = ({ setTopic, setNotes, setQuiz }) => {
            className="button-custom"
         >
           Generate Notes
-        </button>
-        <button
-          onClick={handleQuiz}
-          className="button-custom"
-        >
-          Quiz
         </button>
         <button
           onClick={handleVoiceInput}

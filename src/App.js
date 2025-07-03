@@ -8,7 +8,8 @@ import Register from './pages/Register';
 import ResultDisplay from './components/ResultDisplay';
 import QuizPage from './pages/QuizPage';
 import './App.css';
-
+import FeatureCardsPage from './pages/FeatureCardsPage';
+import StudyPlanGenerator from './components/StudyPlanGenerator';
 function AppContent() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => localStorage.getItem('loggedIn') === 'true');
   const [topic, setTopic] = useState('');
@@ -48,12 +49,12 @@ function AppContent() {
 
       <Routes>
         <Route
-          path="/"
+          path="/generatenotes"
           element={
             <div className="main-content">
-              <h1>EDUGENIE</h1>
+              <h1>Generate Notes</h1>
               <p className="subtitle">
-                Your AI Powered Assistant Transforming Curiosity into Knowledge with Every Click.
+                Transform your topics into concise, well-structured study notes with just a click
               </p>
               <TopicInput setTopic={setTopic} setNotes={setNotes} setQuiz={setQuiz} />
               {notes && <NotesDisplay notes={notes} />}
@@ -62,13 +63,14 @@ function AppContent() {
             </div>
           }
         />
-
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/register" element={<Register />} />
         <Route
           path="/quiz"
           element={isLoggedIn ? <QuizPage setScore={setScore} /> : <Login setIsLoggedIn={setIsLoggedIn} />}
         />
+        <Route path="/" element={<FeatureCardsPage />} />
+        <Route path="/study-plan" element={<StudyPlanGenerator />} />
       </Routes>
     </div>
   );
